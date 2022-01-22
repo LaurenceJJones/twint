@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ## Main varibles
 ELASTIC_USER="elastic"
 ELASTIC_PASS="changeme"
