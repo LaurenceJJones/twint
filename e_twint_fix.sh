@@ -7,7 +7,7 @@ ELASTIC_PORT="9200"
 USE_HTTPS=false
 ##END
 
-ELASTIC_CONNECTION_URL="$([ $USE_HTTPS = true ] && echo "https://" || echo "http://")$([[ $ELASTIC_USER != "" ]] && echo "$ELASTIC_USER:$ELASTIC_PASS" || echo "")@$ELASTIC_URL:$([[$ELASTIC_PORT != ""]] && echo ":$ELASTIC_PORT" || "")"
+ELASTIC_CONNECTION_URL="$([ $USE_HTTPS = true ] && echo "https://" || echo "http://")$([[ $ELASTIC_USER != "" ]] && echo "$ELASTIC_USER:$ELASTIC_PASS" || echo "")@$ELASTIC_URL$([[ $ELASTIC_PORT != "" ]] && echo ":$ELASTIC_PORT" || "")"
 
 #debug
 #echo $ELASTIC_CONNECTION_URL
