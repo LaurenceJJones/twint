@@ -12,7 +12,7 @@ ELASTIC_CONNECTION_URL="$([ $USE_HTTPS = true ] && echo "https://" || echo "http
 #debug
 #echo $ELASTIC_CONNECTION_URL
 
-#Uncomment if twinttweets index exists in elastic
+#Uncomment curl command if twinttweets index exists in elastic
 #DISCLAIMER it will delete all indexed tweets
 #curl -XDELETE "$ELASTIC_CONNECTION_URL/twinttweets?pretty" -H 'Content-Type: application/json'
 
